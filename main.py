@@ -20,6 +20,7 @@ def handle_start(message):
     localnames.clear()
     good.clear()
     hero.clear()
+    mid.clear()
     specific_player_items.clear()
     fetched_id.clear()
     match_ids.clear()
