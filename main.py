@@ -48,13 +48,13 @@ def handle_all_messages(message):
     if message.text.lower() == strgood.lower():
         markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
-        bot.reply_to(message, f"Правильно,загаданым героем был:{strgood}Ссылка на матч: https://www.dotabuff.com/matches/{match_ids[mid[0]]}",reply_markup=markup)
+        bot.reply_to(message, f"Правильно,загаданым героем был:{strgood}\nСсылка на матч: https://www.dotabuff.com/matches/{match_ids[mid[0]]}",reply_markup=markup)
 
 
     else:
         markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
-        bot.reply_to(message, f"Неправильно,загаданым героем был:{strgood}Ссылка на матч: https://www.dotabuff.com/matches/{match_ids[mid[0]]}",reply_markup=markup)
+        bot.reply_to(message, f"Неправильно,загаданым героем был:{strgood}\nСсылка на матч: https://www.dotabuff.com/matches/{match_ids[mid[0]]}",reply_markup=markup)
 
 
 
