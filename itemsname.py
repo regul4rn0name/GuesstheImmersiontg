@@ -7,7 +7,7 @@ import random
 item_dnames = []
 localnames = []
 good=[]
-exclude=[115,116,117,118,130,131,132,133,134,127,124,125,122,24]
+exclude=[115, 116, 117, 118, 130, 131, 132, 133, 134, 127, 124, 125, 122, 24]
 def get_item_names(ids):
     # Fetch the item data from the Dota 2 constants repository
     url = "https://raw.githubusercontent.com/odota/dotaconstants/master/build/item_ids.json"
@@ -23,10 +23,10 @@ def get_item_names(ids):
         heroname = response3.json()
         for x in range(0, 2):
             ranh = random.randint(1, 138)
-            if ranh != hero and ranh != exclude:
-                hero.append(ranh)
-            else:
-                x -= 1
+            while ranh in hero or ranh in exclude:
+                ranh = random.randint(1, 138)
+            hero.append(ranh)
+
         item_names = []
 
         # Append names to items using the provided IDs
@@ -35,10 +35,10 @@ def get_item_names(ids):
             item_names.append(item_name)
 
         for item_tag in item_names:
-            item_dname = dname_data.get(str(item_tag), {}).get('dname', )
+            item_dname = dname_data.get(str(item_tag), {}).get('dname',"None")
             item_dnames.append(item_dname)
         for heros in hero:
-            localname = heroname.get(str(heros), {}).get('localized_name', )
+            localname = heroname.get(str(heros), {}).get('localized_name',"None")
             localnames.append(localname)
         good.append(localnames[0])
         random.shuffle(localnames)
