@@ -8,10 +8,10 @@ def main():
 
         mydb = mysql.connector.connect(
             host="localhost",
-            user="main",
+            user="root",
             password="",
             database="matches",
-            port="8889"
+           
         )
 
         mycursor = mydb.cursor()
