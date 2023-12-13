@@ -38,7 +38,9 @@ def handle_start(message):
     but3 = types.KeyboardButton(localnames[2])
     markup.add(but1,but2,but3)
     bot.reply_to(message, stritems, reply_markup=markup)
-
+@bot.message_handler(commands=['help'])
+def handle_help(message):
+    bot.reply_to(message, "Чтобы сообщить об ощибке или предложить идею писать @eblo69")
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def handle_all_messages(message):
 
