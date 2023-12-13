@@ -32,7 +32,7 @@ def handle_start(message):
         item_dnames.remove("None")
     stritems = ",".join(item_dnames)
     strhero = ",".join(localnames)
-    markup = types.ReplyKeyboardMarkup(row_width=3)
+    markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
     but1 = types.KeyboardButton(localnames[0])
     but2 = types.KeyboardButton(localnames[1])
     but3 = types.KeyboardButton(localnames[2])
@@ -44,13 +44,13 @@ def handle_all_messages(message):
 
     strgood = "".join(good)
     if message.text.lower() == strgood.lower():
-        markup = types.ReplyKeyboardMarkup(row_width=1)
+        markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
         bot.reply_to(message, f"Правильно,загаданым героем был:{strgood}",reply_markup=markup)
 
 
     else:
-        markup = types.ReplyKeyboardMarkup(row_width=1)
+        markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
         bot.reply_to(message, f"Неправильно,загаданым героем был:{strgood}",reply_markup=markup)
 
