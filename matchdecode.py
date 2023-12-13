@@ -4,11 +4,12 @@ import random
 
 hero = []
 specific_player_items = []
-
+mid = []
 
 def main():
     print(len(match_ids))
     ranid = random.randint(0, len(match_ids))
+    mid.append(ranid)
     print("matches id:", match_ids)
     api_key = "your_api_key_here"
 

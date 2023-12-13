@@ -5,7 +5,7 @@ import game
 import telebot
 from itemsname import item_dnames, localnames, good
 from telebot import types
-from matchdecode import hero,specific_player_items
+from matchdecode import hero,specific_player_items,mid
 from get import fetched_id
 from match_ids_module import match_ids
 
@@ -48,13 +48,13 @@ def handle_all_messages(message):
     if message.text.lower() == strgood.lower():
         markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
-        bot.reply_to(message, f"Правильно,загаданым героем был:{strgood}",reply_markup=markup)
+        bot.reply_to(message, f"Правильно,загаданым героем был:{strgood}/n https://www.dotabuff.com/matches/{mid[0]}",reply_markup=markup)
 
 
     else:
         markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
         markup.add("/start")
-        bot.reply_to(message, f"Неправильно,загаданым героем был:{strgood}",reply_markup=markup)
+        bot.reply_to(message, f"Неправильно,загаданым героем был:{strgood}/n https://www.dotabuff.com/matches/{mid[0]}",reply_markup=markup)
 
 
 
