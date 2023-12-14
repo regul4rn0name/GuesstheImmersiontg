@@ -48,6 +48,15 @@ def send(message):
     markup.add(but1, but2, but3)
     bot.reply_to(message, stritems, reply_markup=markup)
 
+    item_dnames.clear()
+    localnames.clear()
+    good.clear()
+    hero.clear()
+    mid.clear()
+    specific_player_items.clear()
+    fetched_id.clear()
+    match_ids.clear()
+
 @bot.message_handler(commands=['help'])
 def handle_help(message):
     bot.reply_to(message, "Чтобы сообщить об ошибке или предложить идею писать @eblo69")
