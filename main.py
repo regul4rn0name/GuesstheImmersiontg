@@ -50,7 +50,7 @@ def send(message):
 
     item_dnames.clear()
     localnames.clear()
-    good.clear()
+
     hero.clear()
     mid.clear()
     specific_player_items.clear()
@@ -65,6 +65,7 @@ def handle_help(message):
 def handle_all_messages(message):
     chat_id = message.chat.id
     strgood = "".join(good)
+    good.clear()
 
     markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
     markup.add("/start")
