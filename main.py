@@ -34,7 +34,7 @@ def get():
     try:
         mydb = mysql.connector.connect(
             host="localhost",
-            user="main",
+            user="root",
             password="",
             database="matches",
         )
