@@ -1,7 +1,7 @@
 import requests
 import random
 
-from get import fetched_id
+
 from match_ids_module import match_ids
 hero = []
 specific_player_items = []
