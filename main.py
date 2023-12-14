@@ -31,12 +31,12 @@ def handle_start(message):
     matchdecode.main()
     itemsname.main()
     game.main()
-    send()
+    send(message)
 
 
 
 
-def send():
+def send(message):
     while "None" in item_dnames:
         item_dnames.remove("None")
     stritems = ",".join(item_dnames)
