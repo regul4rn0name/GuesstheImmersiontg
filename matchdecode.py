@@ -1,6 +1,6 @@
 import requests
 import random
-from itemsname import item_dnames, localnames, good
+
 from get import fetched_id
 from match_ids_module import match_ids
 hero = []
@@ -8,14 +8,12 @@ specific_player_items = []
 mid = []
 
 def main():
-    item_dnames.clear()
-    localnames.clear()
-    good.clear()
+
     hero.clear()
     mid.clear()
     specific_player_items.clear()
     fetched_id.clear()
-    match_ids.clear()
+
     print(len(match_ids))
     ranid = random.randint(0, len(match_ids))
     mid.append(ranid)
