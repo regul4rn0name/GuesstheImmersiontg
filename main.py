@@ -14,38 +14,31 @@ bot = telebot.TeleBot("6871169504:AAFx2hMVgp9AL4ZN50G33UF_u40k7LoJnsY")
 
 
 
-# Add a dictionary to store user states based on chat ID
-user_states = {}
-
 @bot.message_handler(commands=['start'])
 def handle_start(message):
-    chat_id = message.chat.id
-    user_states[chat_id] = {'state': 'start'}  # Initialize user state
-    # Rest of your existing code...
+    item_dnames.clear()
+    localnames.clear()
+    good.clear()
+    hero.clear()
+    mid.clear()
+    specific_player_items.clear()
+    fetched_id.clear()
+    match_ids.clear()
+    get.main()
+    matchdecode.main()
+    itemsname.main()
+    game.main()
 
-@bot.message_handler(func=lambda message: True, content_types=['text'])
-def handle_all_messages(message):
-    chat_id = message.chat.id
-
-    # Retrieve user state
-    if chat_id in user_states:
-        user_state = user_states[chat_id]
-    else:
-        user_states[chat_id] = {'state': 'start'}  # Initialize state if not found
-        user_state = user_states[chat_id]
-
-    # Modify your logic based on user state...
-    
-    # Example:
-    if user_state['state'] == 'start':
-        stritems = ",".join(item_dnames)
-        strhero = ",".join(localnames)
-        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-        but1 = types.KeyboardButton(localnames[0])
-        but2 = types.KeyboardButton(localnames[1])
-        but3 = types.KeyboardButton(localnames[2])
-        markup.add(but1, but2, but3)
-        bot.reply_to(message, stritems, reply_markup=markup)
+    while "None" in item_dnames:
+        item_dnames.remove("None")
+    stritems = ",".join(item_dnames)
+    strhero = ",".join(localnames)
+    markup = types.ReplyKeyboardMarkup(row_width=1,resize_keyboard=True)
+    but1 = types.KeyboardButton(localnames[0])
+    but2 = types.KeyboardButton(localnames[1])
+    but3 = types.KeyboardButton(localnames[2])
+    markup.add(but1,but2,but3)
+    bot.reply_to(message, stritems, reply_markup=markup)
 @bot.message_handler(commands=['help'])
 def handle_help(message):
     bot.reply_to(message, "Чтобы сообщить об ощибке или предложить идею писать @eblo69")
