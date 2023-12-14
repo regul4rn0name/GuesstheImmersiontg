@@ -8,7 +8,7 @@ import matchdecode
 import itemsname
 import game
 
-TOKEN = 'YOUR_BOT_TOKEN'
+TOKEN = '6871169504:AAFx2hMVgp9AL4ZN50G33UF_u40k7LoJnsY'
 bot = telebot.TeleBot(TOKEN)
 
 item_dnames = deque()
