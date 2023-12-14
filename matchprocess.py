@@ -1,6 +1,6 @@
 import mysql.connector
-from match_ids_module import match_ids  # Assuming match_ids is a list of values
-from get import fetched_id
+from main import match_ids, fetched_id
+
 
 
 def main():

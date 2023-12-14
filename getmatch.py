@@ -1,9 +1,9 @@
 import requests
 import time
-from match_ids_module import match_ids
+
 import matchprocess
 
-import get
+
 
 api_key = "your_api_key_here"
 account_id = 86853590  # Replace with the desired account ID
@@ -46,7 +46,6 @@ except KeyboardInterrupt:
     print("Script interrupted by user.")
 
 # Display the matches in the match_ids array
-get.main()
 match_ids = []
 print(match_ids)
 matchprocess.main()
