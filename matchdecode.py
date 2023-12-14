@@ -12,7 +12,7 @@ def main():
     hero.clear()
     mid.clear()
     specific_player_items.clear()
-    fetched_id.clear()
+
 
     print(len(match_ids))
     ranid = random.randint(0, len(match_ids))
