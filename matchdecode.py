@@ -1,19 +1,12 @@
 import requests
+from match_ids_module import match_ids
 import random
 
-
-from match_ids_module import match_ids
 hero = []
 specific_player_items = []
 mid = []
 
 def main():
-
-    hero.clear()
-    mid.clear()
-    specific_player_items.clear()
-
-
     print(len(match_ids))
     ranid = random.randint(0, len(match_ids))
     mid.append(ranid)

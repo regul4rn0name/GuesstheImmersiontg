@@ -9,9 +9,6 @@ localnames = []
 good=[]
 exclude=[115, 116, 117, 118, 130, 131, 132, 133, 134, 127, 124, 125, 122, 24]
 def get_item_names(ids):
-    item_dnames.clear()
-    localnames.clear()
-    good.clear()
     # Fetch the item data from the Dota 2 constants repository
     url = "https://raw.githubusercontent.com/odota/dotaconstants/master/build/item_ids.json"
     url2 = "https://raw.githubusercontent.com/odota/dotaconstants/master/build/items.json"
