@@ -31,9 +31,10 @@ def handle_start(message):
     specific_player_items.clear()
     fetched_id.clear()
     match_ids.clear()
-    game.main()
+    get.main()
     matchdecode.main()
     itemsname.main()
+    game.main()
 
     while "None" in item_dnames:
         item_dnames.remove("None")
