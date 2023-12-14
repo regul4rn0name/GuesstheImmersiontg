@@ -7,6 +7,7 @@ from match_ids_module import match_ids
 import matchdecode
 import itemsname
 import game
+import get
 
 TOKEN = '6871169504:AAFx2hMVgp9AL4ZN50G33UF_u40k7LoJnsY'
 bot = telebot.TeleBot(TOKEN)
