@@ -127,6 +127,7 @@ def get_item_names():
         for heros in hero:
             localname = heroname.get(str(heros), {}).get('localized_name', "None")
             localnames.append(localname)
+        good.clear()
         good.append(localnames[0])
         random.shuffle(localnames)
         print(item_dnames, localnames, good)
@@ -173,6 +174,7 @@ def handle_help(message):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def handle_all_messages(message):
     chat_id = message.chat.id
+    strgood=""
     strgood = "".join(good)
     good.clear()
 
@@ -181,9 +183,9 @@ def handle_all_messages(message):
 
     if message.text.lower() == strgood.lower():
         bot.reply_to(message, f"Correct! The hero was: {strgood}\nMatch link: https://www.dotabuff.com/matches/{match_ids[mid[0]]}", reply_markup=markup)
-        strgood=""
+        
     else:
         bot.reply_to(message, f"Incorrect! The hero was: {strgood}\nMatch link: https://www.dotabuff.com/matches/{match_ids[mid[0]]}", reply_markup=markup)
-        strgood=""
+        
 
 bot.infinity_polling()
