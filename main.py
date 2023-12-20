@@ -181,7 +181,9 @@ def handle_all_messages(message):
 
     if message.text.lower() == strgood.lower():
         bot.reply_to(message, f"Correct! The hero was: {strgood}\nMatch link: https://www.dotabuff.com/matches/{match_ids[mid[0]]}", reply_markup=markup)
+        strgood=""
     else:
         bot.reply_to(message, f"Incorrect! The hero was: {strgood}\nMatch link: https://www.dotabuff.com/matches/{match_ids[mid[0]]}", reply_markup=markup)
+        strgood=""
 
 bot.infinity_polling()
