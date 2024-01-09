@@ -5,10 +5,9 @@ import telebot
 from telebot import types
 import mysql.connector
 
-# Create a lock
+
 execution_lock = threading.Lock()
 
-# Variables
 bot = telebot.TeleBot("6871169504:AAFx2hMVgp9AL4ZN50G33UF_u40k7LoJnsY")
 match_ids = []
 hero = []
@@ -19,7 +18,7 @@ localnames = []
 good = []
 fetched_id = []
 
-# Dictionary to store data about the last message for each user
+
 last_message = {}
 
 def get():
@@ -44,7 +43,7 @@ def get():
         mycursor.execute(sql)
         fetched_match_ids = mycursor.fetchall()
 
-        # Extract match_ids from the fetched data and append them to the existing array
+        
         match_ids.extend([match_id[0] for match_id in fetched_match_ids])
         fetched_id.extend([match_id[0] for match_id in fetched_match_ids])
 
