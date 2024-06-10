@@ -8,7 +8,7 @@ import mysql.connector
 
 execution_lock = threading.Lock()
 
-bot = telebot.TeleBot("6871169504:AAFx2hMVgp9AL4ZN50G33UF_u40k7LoJnsY")
+bot = telebot.TeleBot("xxxxxxxxxxx")
 match_ids = []
 hero = []
 specific_player_items = []
